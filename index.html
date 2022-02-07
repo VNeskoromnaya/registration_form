@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Форма регистрации</h1>
+        <!-- <div class="form"> -->
+        <form action="" class='form'>
+            <input type="text" class="form_field" placeholder="Введите логин" id="login" pattern="^[A-Za-z]+$" minlength='5' maxlength='8' />
+            <span class="validation-message" id="login_validation">"Логин" содержит буквы латиницы (большая/маленькая) и цифры</span>
+            <input type="email" class="form_field" placeholder="Введите email" pattern="^[A-Za-z]((\.|-)?[A-Za-z0-9]+)+@[A-Za-z0-9](-?[A-Za-z0-9]+)+(\.[A-Za-z]{2,})+$" id="email" />
+            <span class="validation-message" id="email_validation">Вы указали email в неверном формате</span>
+            <input type="text" class="form_field" placeholder="Введите Ваше имя" pattern="^[А-ЯЁ][а-яё]+(-[А-ЯЁ][а-яё]+)?$"  minlength='2' maxlength='15' id="userName" />
+            <span class="validation-message" id="userName_validation">"Ваше имя" может содержать только буквы кириллицы (большая и маленькая)</span>
+            <input type="tel" class="form_field" placeholder="Введите номер телефона" pattern="^((0|\+380)[\- ]?)+(\(?\d{2}\)?[\- ]?)?[\d\- ]{7}$" minlength='10' maxlength='13' id="phoneNum" />
+            <span class="validation-message" id="tel_validation">Формат записи телефона "+380" или "0.."</span>
+            <!-- <select class="job" id="job" onchange="show()">
+                <option disabled selected="selected">Вы работаете?</option>
+                <option value="student">Студент</option>
+                <option value="worker">Работаю</option>
+                <option value="unemployer">Не работаю</option>
+                <option value="maternity">В декретном отпуске</option>
+                <option value="retired">Пенсионер</option>
+            </select> -->
+            <input type="password" class="form_field" placeholder="Введите пароль (5-8 символов)" value="" pattern="^[A-Za-z0-9]{5,8}$" minlength='5' maxlength='8' id="password"/>
+            <span class="validation-message" id="password_validation">"Пароль" может содержать только буквы латиницы (большая/маленькая) и цифры</span>
+            <input type="password" class="form_field" placeholder="Повторите пароль" pattern="^[A-Za-z0-9]{5,8}$" value="" id="repeatPassword">
+            <div id="errorMessage"></div>
+            <input id = "btn" type="submit" class="submit" value="Зарегистрироваться"/>
+        <!-- </div> -->
+        </form>
+        <div>
+        <p class="text">Если вы уже зарегистрированы, тогда нажмите <a href="#">здесь</a>.</p>
+        <p class="text">Вернуться на <a href="#">главную</a></p>
+    </div>
+
+    <!-- pattern="[A-Za-z0-9]" minlength='5' maxlength='8' -->
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
